@@ -10,7 +10,7 @@ node ('maven') {
    }
    stage('repots'){
       //all reopts 
-      junit 'target/surefire-repots/*.xml'
+      junit 'target/surefire-reports/*.xml'
    }
 
 
