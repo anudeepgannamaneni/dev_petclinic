@@ -1,5 +1,7 @@
 pipeline{
-    agent maven
+    agent {
+  label 'maven'
+}
     stages{
         stages('bulid'){
             //to clone git 
