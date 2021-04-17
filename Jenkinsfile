@@ -3,7 +3,7 @@ pipeline{
   label 'maven'
 }
     stages{
-        stages('bulid'){
+        stages('scm'){
             //to clone git 
             git branch: 'main', url: 'https://github.com/anudeepgannamaneni/dev_petclinic.git'
 
