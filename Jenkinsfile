@@ -1,15 +1,12 @@
-pipeline{
-    agent {
-  label 'maven'
+pipleline {
+    agent { lable 'maven' }
+       
+       stages{
+           stage('scm'){
+               steps{
+                   git branch: 'main', url: 'https://github.com/anudeepgannamaneni/dev_petclinic.git'
+               }
+           }
+       }
+
 }
-    stages{
-        steps('scm'){
-            //to clone git 
-            git branch: 'main', url: 'https://github.com/anudeepgannamaneni/dev_petclinic.git'
-
-        }
-
-    }
-}
-
-
