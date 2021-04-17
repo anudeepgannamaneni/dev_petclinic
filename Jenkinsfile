@@ -1,12 +1,6 @@
-pipleline {
-    agent { lable 'maven' }
-       
-       stages{
-           stage('scm'){
-               steps{
-                   echo 'first pipeline'
-               }
-           }
-       }
+node ('maven') {
 
-}
+   stage('SCM') {
+      // git clone
+	  git 'https://github.com/GitPracticeRepo/spring-petclinic.git'
+   }
